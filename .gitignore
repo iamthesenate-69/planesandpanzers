@@ -23,5 +23,6 @@
 hs_err_pid*
 
 # Gradle bad
+/build
 .gradle
 .idea
