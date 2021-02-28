@@ -21,11 +21,11 @@ public class PaP {
     public static HashMap<String, Army> troops = new HashMap<String, Army>();
 
     public PaP() throws IOException, ParseException {
-        JSONArray a = (JSONArray) new JSONParser().parse(new FileReader(".\\planes&panzers.json"));
+        JSONArray a = (JSONArray) new JSONParser().parse(new FileReader(".\\assets\\planes&panzers.json"));
         for (Object o : a)
             importNode((JSONObject) o);
 
-        File f = new File(".\\map.png");
+        File f = new File(".\\assets\\map.png");
         BufferedImage img = ImageIO.read(f);
         ImageIO.write(img, "png", new File(".\\temp\\temp.png"));
     }
